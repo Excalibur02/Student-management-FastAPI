@@ -4,7 +4,7 @@ import os
 
 load_dotenv()
 
-db_url = "mongodb+srv://dhruv:fast1234@fast0.q8zzk.mongodb.net/?retryWrites=true&w=majority&appName=fast0"
+db_url = os.getenv('MONGO_DB_URL')
 client = MongoClient(db_url)
 
 database = client.student_management
